@@ -1,0 +1,225 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* box styles default*/
+* {
+    box-sizing: border-box;
+}
+/* Header Styles */
+
+.main-header{
+    background-image: url(../img/unsplash-bonus.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 20em 3em;
+}
+.main-header h1{
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 4em;
+    text-align:right;
+    color: #fff;
+}
+span.bold{
+    font-weight:700;
+    color: #cc0000;
+}
+.main-header h2{
+    font-family: sans-serif;
+    font-size: 2em;
+    text-align: right;
+    color: #fff;
+}
+
+.header-text{
+    width: 500px;
+    float: right;
+    margin-top: 4em;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: #333 1px 1px;
+    
+    
+}
+/* main nav styles */
+.main-nav{
+    width: 200px;
+height: 200px;
+background: #cc0000;
+position: fixed;
+z-index: 9999;
+top: 0;
+left: 8em;
+border: solid 2px #cc0000;
+}
+
+ul.nav{
+    text-align: center;
+    margin-top: 1em;
+}
+ul.nav li{
+    font-size:1.5em;
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-bottom: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul.nav li a{
+    text-decoration: none;
+    color: #fff;
+}
+ul.nav li a:hover{
+    color: #333;
+}
+
+/* social nav links */
+
+ul.social{
+    text-align: center;
+    margin-top: 3em;
+}
+ul.social li{
+    display:inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+ul.social li a{
+    color: #fff;
+}
+ul.social li a:hover{
+    color: #333;
+}
+ul.social li i{
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+/* intro section styles */
+
+.intro{
+    width: 100%;
+    padding: 3em 0;
+    background: #333;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: #aaa 0px 4px 4px;
+}
+.intro-content{
+    width: 970px;
+    margin: 0 auto;
+}
+.intro-content > * {
+    float: left;
+}
+.intro-content a{
+    text-decoration: none;
+    color: #be4343;
+}
+.intro-content a:hover{
+    color: #fff;
+}
+.intro-content h1{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 3.25rem;
+    font-weight: 200;
+    padding: 0.5em;
+    border: solid 2px #be4343;
+    border-radius: 1em;
+}
+.intro-content p {
+    width: 550px;
+    margin-left: 3em;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #aaa;
+}
+.intro-content:after{
+    display: table;
+    content: ' ';
+    clear: both;
+}
+
+/* project styles */
+
+.projects{
+    padding: 2em 0;
+    width: 100%;
+}
+
+.project-content {
+    width: 970px;
+    margin: 0 auto;
+}
+.project-content h2 {
+    color: #333;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 2em;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+.project-list li{
+    max-width: 31.25em;
+    max-height: 25em;
+    background: #eee;
+    margin: 0 auto 3em auto;
+    border: solid 5px #333;
+    display:block;
+}
+.project-list li img{
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+.caption {
+    display:none;
+}
+.project-list li:hover{
+}
