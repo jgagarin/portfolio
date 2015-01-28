@@ -100,6 +100,7 @@ span.bold{
     z-index: 9999;
     top: 50px;
     font-size: 2.5em;
+    color: #000;
 }
 .toggler:hover{
     cursor: pointer;
@@ -222,24 +223,73 @@ ul.social li i{
     font-family: sans-serif;
 }
 .project-list li{
-    max-width: 31.25em;
-    max-height: 25em;
+    width: 440px;
     background: #eee;
-    margin: 0 auto 3em auto;
+    margin: 0 0.5rem 1.25rem ;
+    padding: 5px;
     border: solid 5px #333;
-    display:block;
+    display:inline-block;
 }
 .project-list li img{
     width: 100%;
     display: block;
-    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+}
+.project-list li figure{
+    position: relative;
 }
 .caption {
-    display:none;
+    position: absolute;
+    padding: 20px;
+    height: 90px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    background: #2c3f52;
+    color: #fff;
+    
 }
-.project-list li:hover{
+.caption h3{
+    font-family:sans-serif;
+    font-weight: 200;
+    font-size: 1.25rem;
+}
+.project-list figure:hover img{
+    
+    transform: translateY(-90px);
 }
 
+.project-list figcaption{
+    height: 90px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+}
+
+.project-list figcaption a {
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 200;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background: #be4343;
+    color: #fff;
+}
+
+.project-list figcaption p {
+    
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+    margin-top: 1rem;
+}
 /* contact styles */
 
 .contact {
