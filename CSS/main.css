@@ -95,6 +95,15 @@ span.bold{
     
 }
 /* main nav styles */
+.toggler{
+    position: fixed;
+    z-index: 9999;
+    top: 50px;
+    font-size: 2.5em;
+}
+.toggler:hover{
+    cursor: pointer;
+}
 .main-nav{
     width: 200px;
 height: 200px;
