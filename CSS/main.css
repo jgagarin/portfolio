@@ -389,6 +389,7 @@ ul.project-list{
     
     .toggler{
         left: 30px;
+        font-size: 2em;
     }
     .main-nav{
         width: 175px;
@@ -410,6 +411,9 @@ ul.project-list{
     
 }
 @media (max-width: 598px)/*intro styles */{
+    .intro-content{
+        padding-left: 3em;
+    }
     .intro-content h1 {
         font-size: 2.25em;
         margin-bottom: 1em;
