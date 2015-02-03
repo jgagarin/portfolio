@@ -55,6 +55,8 @@ table {
 
 body{
     -webkit-font-smoothing: antialiased;
+    width: 100%;
+    overflow: auto;
 }
 
 /* Header Styles */
@@ -107,13 +109,13 @@ span.bold{
 }
 .main-nav{
     width: 200px;
-height: 200px;
-background: #cc0000;
-position: fixed;
-z-index: 9999;
-top: 0;
-left: 8em;
-border: solid 2px #cc0000;
+    height: 200px;
+    background: #cc0000;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 8em;
+    border: solid 2px #cc0000;
 }
 
 ul.nav{
@@ -168,7 +170,7 @@ ul.social li i{
     box-shadow: #aaa 0px 4px 4px;
 }
 .intro-content{
-    width: 970px;
+    width: 77.6%;
     margin: 0 auto;
 }
 .intro-content > * {
@@ -186,12 +188,13 @@ ul.social li i{
     font-family: sans-serif;
     font-size: 3.25rem;
     font-weight: 200;
+    margin-bottom: 1em;
     padding: 0.5em;
     border: solid 2px #be4343;
     border-radius: 1em;
 }
 .intro-content p {
-    width: 550px;
+    max-width: 550px;
     margin-left: 3em;
     font-size: 1.5rem;
     font-weight: 200;
@@ -211,8 +214,13 @@ ul.social li i{
 }
 
 .project-content {
-    width: 970px;
+    width: 77.6%;
     margin: 0 auto;
+}
+.project-content:after{
+    display: table;
+    content: ' ';
+    clear: both;
 }
 .project-content h2 {
     color: #333;
@@ -222,13 +230,22 @@ ul.social li i{
     font-weight: 200;
     font-family: sans-serif;
 }
+ul.project-list{
+    display: block;
+    position: relative;
+    float: left;
+    
+}
 .project-list li{
-    width: 440px;
+    max-width: 27.5rem;
     background: #eee;
     margin: 0 0.5rem 1.25rem ;
     padding: 5px;
     border: solid 5px #333;
-    display:inline-block;
+    display:block;
+    position: relative;
+    float: left;
+    
 }
 .project-list li img{
     width: 100%;
@@ -298,7 +315,7 @@ ul.social li i{
     background: #be4343;
 }
 .contact-content{
-    width: 970px;
+    width: 77.6%;
     margin: 0 auto 3em;
 }
 .contact-content h2{
@@ -342,7 +359,7 @@ ul.social li i{
     background: url(../img/notebook.png);
 }
 .footer-content{
-    width: 970px;
+    width: 77.6%;
     margin: 0 auto;
 }
 .footer-content h3 {
@@ -365,3 +382,121 @@ ul.social li i{
     clear:both;
 }
     
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 560px)/*header styles*/ {
+    
+    .toggler{
+        left: 30px;
+    }
+    .main-nav{
+        width: 175px;
+        height: 175px;
+        left: 6em;
+    }
+    .main-header{
+        padding: 15em 1em;
+    }
+    .main-header h1 {
+        font-size: 3em;
+    }
+    .main-header h2 {
+        font-size: 1.5em;
+    }
+    ul.social{
+        margin-top: 2em;
+    }
+    
+}
+@media (max-width: 598px)/*intro styles */{
+    .intro-content h1 {
+        font-size: 2.25em;
+        margin-bottom: 1em;
+    }
+    .intro-content p {
+        margin-left: 0;
+        width: 10em;
+        letter-spacing: 1px;
+        text-align: justify;
+        line-height: 1;
+    }
+}
+@media (min-width: 599px) and (max-width: 1100px)/* intro styles */ {
+    
+    .intro-content h1{
+        font-size: 3em;
+        margin: 0 0.5em 0.5em 0;
+    }
+    
+    .intro-content p {
+        margin-left: 0;
+    }
+    
+}
+@media (min-width:1101px) and (max-width: 1200px) {
+    .intro-content h1 {
+        font-size: 3em;
+    
+    }
+    
+    
+}
+
+@media (max-width:500px) {
+    .caption{
+        padding: 15px;
+    }
+    .project-list figcaption{
+        height: 110px;
+    }
+    .project-list figure:hover img{
+         transform: translateY(-110px);
+    }
+    .project-list figcaption a{
+        position: relative;
+        top:0;
+        right: 0;
+        margin: 15px 0;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 405px)/* portfolio styles */{
+    .caption h3 {
+        font-size: 1rem;
+    }
+    .project-list figcaption p {
+        font-size: 0.75rem;
+    }
+    .project-list figcaption{
+        height: 110px;
+    }
+    .project-list figure:hover img{
+         transform: translateY(-110px);
+    }
+    .project-list figcaption a {
+        font-size: 0.75rem;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 15px 0;
+}
+
+@media (max-width: 800px)/* contact styles */ {
+    .contact-content h2 {
+        margin: 1em 0;
+    }
+    .contact-content p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 665px)/* footer styles */{
+    .footer-content h3 {
+        margin-bottom: 0.25em;
+    }
+    .footer-content p {
+        float: left;
+    }
+}
